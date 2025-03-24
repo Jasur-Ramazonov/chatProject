@@ -2,6 +2,12 @@ import { useForm } from "react-hook-form";
 import { checkUser, getUsers } from "./utils/requestsBack";
 import { Link, useNavigate } from "react-router-dom";
 
+interface User {
+  id: string;
+  email: string;
+  password: string;
+}
+
 const SignIn = () => {
   const { handleSubmit, register, reset } = useForm<{
     email: string;
@@ -17,8 +23,11 @@ const SignIn = () => {
         onSubmit={handleSubmit((data) => {
           checkUser(data).then(() => {
             getUsers().then((res) => {
-              let users = res.docs.map((itm) => {
-                return { id: itm.id, ...itm.data() };
+              let users: User[] = res.docs.map((itm) => {
+                return {
+                  id: itm.id,
+                  ...(itm.data() as { email: string; password: string }),
+                };
               });
               let user = users.find((itm) => itm.email === data.email);
               navigate(`/telegram/${user?.id}`);

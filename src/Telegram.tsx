@@ -22,6 +22,12 @@ interface Message {
   receiver: string;
 }
 
+interface User {
+  id: string;
+  email: string;
+  password: string;
+}
+
 const Telegram = () => {
   const [users, setUsers] = useState<
     { email: string; password: string; id: string }[]
@@ -46,8 +52,11 @@ const Telegram = () => {
       navigate("/signin");
     } else {
       getUsers().then((res) => {
-        let user = res.docs.map((itm) => {
-          return { id: itm.id, ...itm.data() };
+        let user: User[] = res.docs.map((itm) => {
+          return {
+            id: itm.id,
+            ...(itm.data() as { email: string; password: string }),
+          };
         });
         setUsers(user);
         getMessages(takeMessages);
