@@ -22,22 +22,22 @@ const SignUp = () => {
           });
           reset();
         })}
-        className="flex justify-center items-center gap-2 flex-col w-full"
+        className="flex justify-center items-center gap-2 flex-col w-full p-2"
       >
         <input
           {...register("email")}
           type="text"
-          className="form-control w-25"
+          className="form-control md:w-1/4 w-1/2"
           placeholder="email"
         />
         <input
           {...register("password")}
           type="text"
-          className="form-control w-25"
+          className="form-control md:w-1/4 w-1/2"
           placeholder="password"
         />
-        <button className="btn btn-primary w-25">Sign Up</button>
-        <Link to="/signin" className="btn btn-success w-25">
+        <button className="btn btn-primary md:w-1/4 w-1/2">Sign Up</button>
+        <Link to="/signin" className="btn btn-success md:w-1/4 w-1/2">
           Sign In
         </Link>
       </form>
