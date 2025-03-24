@@ -27,17 +27,17 @@ const SignUp = () => {
         <input
           {...register("email")}
           type="text"
-          className="p-2 outline-none rounded-md text-dark focus:outline-[#3498db] ease-linear duration-100 md:w-1/4 w-1/2"
+          className="p-2 outline-none rounded-md text-dark focus:outline-[#3498db] ease-linear duration-100 md:w-1/4 w-3/4"
           placeholder="email"
         />
         <input
           {...register("password")}
           type="text"
-          className="p-2 outline-none rounded-md text-dark focus:outline-[#3498db] ease-linear duration-100 md:w-1/4 w-1/2"
+          className="p-2 outline-none rounded-md text-dark focus:outline-[#3498db] ease-linear duration-100 md:w-1/4 w-3/4"
           placeholder="password"
         />
-        <button className="btn btn-primary md:w-1/4 w-1/2">Sign Up</button>
-        <Link to="/signin" className="btn btn-success md:w-1/4 w-1/2">
+        <button className="btn btn-primary md:w-1/4 w-3/4">Sign Up</button>
+        <Link to="/signin" className="btn btn-success md:w-1/4 w-3/4">
           Sign In
         </Link>
       </form>
