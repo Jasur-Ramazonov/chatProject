@@ -42,13 +42,13 @@ const SignIn = () => {
           {...register("email")}
           type="text"
           placeholder="email"
-          className="form-control md:w-1/4 w-1/2"
+          className="form-control md:w-1/4 w-1/4"
         />
         <input
           {...register("password")}
           type="text"
           placeholder="password"
-          className="form-control md:w-1/4 w-1/2"
+          className="form-control md:w-1/4 w-1/4"
         />
         <button type="submit" className="btn btn-primary md:w-1/4 w-1/2">
           Sign in
