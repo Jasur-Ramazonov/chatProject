@@ -42,13 +42,13 @@ const SignIn = () => {
           {...register("email")}
           type="text"
           placeholder="email"
-          className="form-control md:w-1/4 w-1/4"
+          className="p-2 outline-none rounded-md text-dark focus:outline-[#3498db] ease-linear duration-100 md:w-1/4 w-1/2"
         />
         <input
           {...register("password")}
           type="text"
           placeholder="password"
-          className="form-control md:w-1/4 w-1/4"
+          className="p-2 outline-none rounded-md text-dark focus:outline-[#3498db] ease-linear duration-100 md:w-1/4 w-1/2"
         />
         <button type="submit" className="btn btn-primary md:w-1/4 w-1/2">
           Sign in
