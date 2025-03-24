@@ -36,7 +36,7 @@ const SignIn = () => {
             });
           });
         })}
-        className="flex flex-col gap-2 justify-center items-center w-full"
+        className="flex flex-col gap-2 justify-center items-center w-full p-2"
       >
         <input
           {...register("email")}
@@ -50,10 +50,10 @@ const SignIn = () => {
           placeholder="password"
           className="form-control md:w-1/4 w-1/2"
         />
-        <button type="submit" className="btn btn-primary w-25">
+        <button type="submit" className="btn btn-primary md:w-1/4 w-1/2">
           Sign in
         </button>
-        <Link to="/signup" className="btn btn-success w-25">
+        <Link to="/signup" className="btn btn-success md:w-1/4 w-1/2 ">
           Sign Up
         </Link>
       </form>
